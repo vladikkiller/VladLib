@@ -1,7 +1,9 @@
 ﻿namespace VladLib
 {
+    //Реалізація класу People
     public class People
     {
+        //Опис атрибутів класу People
         private int age { get; set; }
         private string sex { get; set; }
         private double height { get; set; }
@@ -10,7 +12,7 @@
         private string creed { get; set; }
         private string profession { get; set; }
         private int passportId { get; set; }
-
+        //Параметризований конструктор класу People
         public People(int age,
             string sex,
             double height,
@@ -29,17 +31,16 @@
             this.profession = profession;
             this.passportId = passportId;
         }
-
+        //Метод для визначення індекса маси тіла людини
         public void indexImt()
         {
             double imt;
             imt = weight/Math.Pow(height, 2);
             Console.WriteLine($"IMT: {imt}");
         }
-
+        //Метод для виводу інформації про об'єкт класу People
         public void Print()
         {
-            Console.WriteLine("--------------------");
             Console.WriteLine($"age: {age} y. o.");
             Console.WriteLine($"sex: {sex}");
             Console.WriteLine($"height: {height}m");

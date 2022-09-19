@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace VladLib
 {
-    internal class Student : People
+    //Реалізація класу Student, який наслідує атрибути і методи класу People
+    public class Student : People
     {
+        //Атрибути класу Student
         public int numbId { get; set; }
         public string group { get; set; }
-
+        //Параметризований конструктор класу Student
         public Student(int age,
             string sex,
             double height,
@@ -25,8 +27,8 @@ namespace VladLib
             this.numbId = numbId;
             this.group = group;
         }
-
-        public void PrintStudents()
+        //Вивід інформації про об'єкт класу Student
+        public void PrintStudent()
         {
             base.Print();
             Console.WriteLine($"numbID: {numbId}");

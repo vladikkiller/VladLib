@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace VladLib
 {
-    class Worker : People
+    //Реалізація класу Worker, який наслідує методи та атрибути класу People
+    public class Worker : People
     {
+        //Атрибути класу Worker
         private string position { get; set; }
         private string unit { get; set; }
-
+        //Конструктор з параметрами класу Worker
         public Worker(int age,
             string sex,
             double height,
@@ -25,7 +27,8 @@ namespace VladLib
             this.position = position;
             this.unit = unit;
         }
-        public void PrintStudents()
+        //Вивід інформації про об'єкт класу Worker
+        public void PrintWorker()
         {
             base.Print();
             Console.WriteLine($"position: {position}");
